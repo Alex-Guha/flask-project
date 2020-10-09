@@ -1,0 +1,94 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700);
+
+body {
+	margin: 0;
+}
+
+.nav-bar {
+	height: 45px;
+	z-index: 3;
+	position: sticky;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 45px;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.wrapper {
+  width: 80%;
+  border: 20px solid white;
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 20px auto;
+  max-width: 700px;
+  z-index: 2;
+  outline: 20px solid #bdc3c7;
+  position: relative;
+  background: white;
+  min-height: 400px
+}
+
+.post {
+  height: 0%;
+}
+
+.date {
+  color: #3498db;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+
+.quote{
+  border-left: 5px solid #bdc3c7;
+  padding-left: 5px;
+}
+
+h2 {
+  font-size: 2.0rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin: 10px auto;
+}
+
+h1 {
+  font-size: 3.0rem;
+  font-weight: bold;
+  color: #6baaaf;
+  margin: 0;
+}
+
+hr{
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}

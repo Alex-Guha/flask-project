@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %}Short Stories{% endblock %}
+{% block body %}
+<div class="wrapper">
+        <div class="post">
+            <h1>Short Stories</h1>
+            <hr>
+
+            <p class="quote">
+                You can email me any questions at alexandersguha@gmail.com
+            </p>
+            <hr>
+            <form action="#" method="post">
+                First name:
+                <br>
+                <input type="text" name="firstname">
+                <br>
+                
+                Last name:
+                <br>
+                <input type="text" name="lastname">
+                <br>
+                
+                Email:
+                <br>
+                <input type="text" name="email">
+                <br>
+                
+                Comments:
+                <br>
+                <textarea name="feedback" rows="6" cols="80" placeholder="Any comments, ideas, or complaints you have can go here."></textarea>
+                <br>
+                
+                <br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
+    </div>
+{% endblock %}

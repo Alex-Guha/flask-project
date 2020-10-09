@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="/css/blog_css.css">
+    <!-- All credit for the stars goes to https://www.script-tutorials.com/night-sky-with-twinkling-stars/ -->
+    <link rel="stylesheet" type="text/css" href="/css/starry_css.css">
+    <link rel="icon" href="https://lh4.googleusercontent.com/K7qyqVfOFbJi8bKP7hZqxBFzIr0isJzqqGYdWv-lRc8skZkTBVfaRW89soSDbYzfQkaD__KJgaR7NH29FTdU=w1920-h976" sizes="32x32">
+</head>
+
+<body>
+
+    <div class="nav-bar">
+        <ul>
+            <li><a href="/index">Home</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/stories">Short Stories</a></li>
+            <li><a href="/about">About</a></li>
+        </ul>
+    </div>
+
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic|Source+Code+Pro:400,700' rel='stylesheet' type='text/css'>
+
+    {% block body %}{% endblock %}
+
+</body>
+
+</html>
