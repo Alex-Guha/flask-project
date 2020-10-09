@@ -14,9 +14,9 @@ def home():
 	return render_template('index.html')
 
 # Sends the css files, or any file requested (so be careful!)
-@app.route('/css/<path>')
+@app.route('/static/<path>')
 def send_css(path):
-	return send_from_directory('css', path)
+	return send_from_directory('static', path)
 
 #Handles the form input from the stories page and puts it in feedback.txt
 @app.route('/stories/', methods=['POST', 'GET'])
@@ -63,7 +63,7 @@ def user():
 	else:
 		return redirect(url_for('admin'))
 
-@app.route('/logout')
+@app.route('/logout/')
 def logout():
 	if 'user' in session:
 		session.pop('user', None)

@@ -1,5 +1,10 @@
 {% extends 'base.html' %}
 {% block title %}Admin Page{% endblock %}
 {% block body %}
-
+<div class="wrapper">
+	<!-- Simple little logout button -->
+	<form action="/logout/" method="get">
+		<input type="submit" value="Submit">
+	</form>
+</div>
 {% endblock %}
