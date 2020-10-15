@@ -10,13 +10,15 @@
 </head>
 
 <body>
-
     <div class="nav-bar">
         <ul>
-            <li><a href="/index">Home</a></li>
-            <li><a href="/blog">Blog</a></li>
-            <li><a href="/stories">Short Stories</a></li>
-            <li><a href="/about">About</a></li>
+            <li {% if request.path == "/index/" %} class='active'{% endif %}><a href="/index">Home</a></li>
+            <li {% if request.path == "/blog/" %} class='active'{% endif %}><a href="/blog">Blog</a></li>
+            <li {% if request.path == "/feedback/" %} class='active'{% endif %}><a href="/feedback">Feedback</a></li>
+            <li {% if request.path == "/about/" %} class='active'{% endif %}><a href="/about">About</a></li>
+            {% if request.path == '/admin/' %}
+				<li style="float:right"><a href="/logout">Logout</a></li>
+            {% endif %}
         </ul>
     </div>
 

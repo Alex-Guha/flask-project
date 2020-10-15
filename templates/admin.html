@@ -1,27 +1,28 @@
 {% extends 'base.html' %}
-{% block title %}Login Page{% endblock %}
+{% block title %}Admin Page{% endblock %}
 {% block body %}
 <div class="wrapper">
-	{% with messages = get_flashed_messages() %}
-		{% if messages %}
-			{% for msg in messages %}
-				<p>{{msg}}</p>
+	<h1>Admin</h1>
+	<hr>
+	<p>Welcome {{user}}</p>
+	{% if permissions == 'god' %}
+		<table style="width:60%">
+			<caption style="text-align:left">Admin Users:</caption>
+			<tr>
+				<td><b>Username</b></td>
+				<td><b>Password</b></td>
+				<td><b>Permission Level</b></td>
+			</tr>
+			{% for user in admin_list %}
+				<tr>
+					<td>{{user[0]}}</td>
+					<td>{{user[1]}}</td>
+					<td>{{user[2]}}</td>
+				</tr>
 			{% endfor %}
-		{% endif %}
-	{% endwith %}
-	<form action="#" method="post">
-		Username:
-		<br>
-		<input type="text" name="user">
-		<br>
-
-		Password:
-		<br>
-		<input type="text" name="pass">
-		<br>
-
-		<br>
-		<input type="submit" value="Submit">
-	</form>
+		</table>
+	{% elif permissions == 'user' %}
+		<p>Unfortunately, your permission level doesn't allow you to do anyhting</p>
+	{% endif %}
 </div>
 {% endblock %}
